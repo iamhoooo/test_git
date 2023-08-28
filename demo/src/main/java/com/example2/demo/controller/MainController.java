@@ -10,6 +10,7 @@ public class MainController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
         return String.format("Hello %s!",name);
+        //테스트용 주석처리
 
     }
 }
