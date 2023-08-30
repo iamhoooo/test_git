@@ -1,7 +1,4 @@
 spring:
-  profiles:
-    active: local
-
   #thymeleaf 설정
   thymeleaf:
     check-template-location: true
