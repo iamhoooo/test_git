@@ -15,7 +15,7 @@ public class CommentJdbcDAO {
 
     public List<Map<String, ?>> selectAllCommentList(){
 
-        return jdbcTemplate.query("SELECT * FROM tb_comment", (rs, rowNum) -> {
+        return jdbcTemplate.query("SELECT * FROM tb_comment2", (rs, rowNum) -> {
             Map<String, Object> mss = new HashMap<>();
             mss.put("no", rs.getInt(1));
             mss.put("author", rs.getString(2));

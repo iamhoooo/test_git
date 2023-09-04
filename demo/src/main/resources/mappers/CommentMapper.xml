@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example2.demo.dao.CommentDAO">
+    <select id="selectAllCommentList" resultType="com.example2.demo.model.CommentModel">
+        SELECT * FROM tb_comment2;
+    </select>
+
+    <select id="selectComment" resultType="com.example2.demo.model.CommentModel">
+        SELECT * FROM tb_comment2 WHERE  no = #{no};
+    </select>
+
+    <insert id="insertComment" parameterType="com.example2.demo.model.CommentModel" useGeneratedKeys="true" keyProperty="no">
+        insert into tb_comment2(author, comment, date)
+        VALUES (#{author},#{comment}, now());
+    </insert>
+
+    <update id="updateComment" parameterType="com.example2.demo.model.CommentModel">
+        UPDATE tb_comment2
+        SET comment = #{comment}
+        WHERE no = #{no}
+    </update>
+
+    <delete id="deleteComment" parameterType="int">
+        DELETE FROM tb_comment2 WHERE no = #{no}
+    </delete>
+</mapper>
+
+
+

@@ -11,7 +11,7 @@ spring:
     static-path-pattern: /static/** # spring mvc 정적 파일들의 경로 (css, js파일 등)
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:4306/spring_db # spring_db 부분은 설정한 DB명과 맞춘다.
+    url: jdbc:mariadb://localhost:4306/test # spring_db 부분은 설정한 DB명과 맞춘다.
     username: spring
     password: spring-pw
     #password: password # 비밀 번호가 있을 경우 설정한다.

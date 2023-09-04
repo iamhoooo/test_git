@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class MainController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String hello(@RequestParam(value = "name", defaultValue = "AI") String name, Model model) {
+    public String hello(@RequestParam(value = "name", defaultValue = "AI") String name,Model model) {
 
         model.addAttribute("message", "안녕하세요!");
 
