@@ -3,31 +3,33 @@
 <head>
   <title>로그인</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href = "/static/style.css">
   <style>
-    /* 추가한 CSS 스타일 */
     body {
+      max-width: 600px;
+      margin: 0 auto;
       height: 100vh; /* 뷰포트 높이(화면 높이)를 100%로 설정 */
       display: flex; /* Flexbox 레이아웃 사용 */
+      flex-direction: column; /* 컨테이너 내의 요소를 수직으로 정렬하기 위해 컬럼 방향으로 설정 */
       justify-content: center; /* 가로 방향 가운데 정렬 */
       align-items: center; /* 세로 방향 가운데 정렬 */
     }
-    form{
-      width: 20%;
-      margin: 0 auto;
-    }
+
   </style>
 </head>
+
 <body>
-  <form>
-    <img class="img-rounded" src="apple.png" alt="사과는 애플" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+<div class="container">
+    <form>
+    <img class="rounded mx-auto d-block" src="/static/apple.png" alt="사과는 애플">
+    <h1 class="h3 mb-3 fw-normal">사과는 애플 로그인</h1>
 
     <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" class="form-control form-control-lg" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
     </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <div class="form-floating m-0 border-0" >
+      <input type="password" class="form-control form-control-lg" id="floatingPassword" placeholder="Password">
       <label for="floatingPassword">Password</label>
     </div>
 
@@ -40,7 +42,7 @@
     <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-body-secondary">&copy; since 2023</p>
   </form>
-
+</div>
 
 </body>
 
